@@ -40,5 +40,5 @@ InputDecoration kInputdecorations(String s) {
 }
 
 const kbackground = Color.fromARGB(255, 24, 2, 36);
-const kbutton1 = Color.fromARGB(255, 244, 222, 28);
-const kbutton2 = Colors.yellowAccent;
+const kbutton1 = Colors.blue;
+const kbutton2 = Colors.blueAccent;

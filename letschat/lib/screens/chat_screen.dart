@@ -104,6 +104,7 @@ class _ChatScreenState extends State<ChatScreen> {
                       _firestore.collection('messages').add({
                         'email': loggedin.email,
                         'text': msg,
+                        'time': DateTime.now().year.toString()+"-"+DateTime.now().month.toString()+"-"+DateTime.now().day.toString()+"-"+DateTime.now().hour.toString()+"-"+DateTime.now().minute.toString()+"-"+DateTime.now().second.toString(),
                       });
                       //Implement send functionality.
                     },
@@ -126,7 +127,7 @@ class MessageStream extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<QuerySnapshot>(
-      stream: _firestore.collection('messages').snapshots(),
+      stream: _firestore.collection('messages').orderBy('time').snapshots(),
       builder: (context, snapshot) {
         if (!snapshot.hasData) {
           print('inside');
