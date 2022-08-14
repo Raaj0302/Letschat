@@ -62,7 +62,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                 ),
                 // ignore: deprecated_member_use
                 TypewriterAnimatedTextKit(
-                  text: ['Flash Chat'],
+                  text: ['Lets Chat'],
                   textStyle: TextStyle(
                     color: Colors.white,
                     fontSize: 45.0,
